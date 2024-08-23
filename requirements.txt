@@ -4,3 +4,4 @@ requests
 flake8
 autopep8
 black
+python-dotenv

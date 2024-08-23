@@ -11,6 +11,9 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 """
 
 from pathlib import Path
+import os
+from dotenv import load_dotenv
+load_dotenv() 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -74,19 +77,23 @@ WSGI_APPLICATION = 'projectLLM.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'OPTIONS': {
-            'service': 'my_llm_service',
-        },
+        'HOST': os.getenv('DEFAULT_DB_HOST'),
+        'USER': os.getenv('DEFAULT_DB_USER'),
+        'NAME': os.getenv('DEFAULT_DB_NAME'),
+        'PORT': os.getenv('DEFAULT_DB_PORT'),
+        'PASSWORD': os.getenv('DEFAULT_DB_PASSWORD'),
     },
-
     'datashift': {
         'ENGINE': 'django.db.backends.postgresql',
-        'OPTIONS': {
-            'service': 'my_service',
-        },
+        'HOST': os.getenv('DATASHIFT_DB_HOST'),
+        'USER': os.getenv('DATASHIFT_DB_USER'),
+        'NAME': os.getenv('DATASHIFT_DB_NAME'),
+        'PORT': os.getenv('DATASHIFT_DB_PORT'),
+        'PASSWORD': os.getenv('DATASHIFT_DB_PASSWORD'),
     },
 }
 

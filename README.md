@@ -43,28 +43,24 @@ This project consists of a custom CLI command that:
 
 4. Set up the PostgreSQL databases:
 
-   - Ensure you have two PostgreSQL databases set up: one for projectLLM and one for Datashift.
-   - Create or update the `.pg_service.conf` file in your home directory with the following structure:
+   Ensure you have two PostgreSQL databases set up: one for `projectLLM` and one for `Datashift`.
 
-     ```
-     [my_service]
-     host=
-     user=
-     dbname=
-     port=
-     password=
+   Update your environment variables to configure the database connections:
 
-     [my_llm_service]
-     host=
-     user=
-     dbname=
-     port=
-     password=
-     ```
+   ```bash
+   export DEFAULT_DB_HOST=<your_projectLLM_db_host>
+   export DEFAULT_DB_USER=<your_projectLLM_db_user>
+   export DEFAULT_DB_NAME=<your_projectLLM_db_name>
+   export DEFAULT_DB_PORT=<your_projectLLM_db_port>
+   export DEFAULT_DB_PASSWORD=<your_projectLLM_db_password>
 
-   - Fill in the appropriate details for each service:
-     - `[my_service]` should contain the connection details for the Datashift project database.
-     - `[my_llm_service]` should contain the connection details for the projectLLM database.
+   export DATASHIFT_DB_HOST=<your_Datashift_db_host>
+   export DATASHIFT_DB_USER=<your_Datashift_db_user>
+   export DATASHIFT_DB_NAME=<your_Datashift_db_name>
+   export DATASHIFT_DB_PORT=<your_Datashift_db_port>
+   export DATASHIFT_DB_PASSWORD=<your_Datashift_db_password>
+
+   ```
 
 5. Apply migrations:
 
