@@ -75,7 +75,7 @@ WSGI_APPLICATION = 'projectLLM.wsgi.application'
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
 DATABASES = {
-   'default': {
+    'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'OPTIONS': {
             'service': 'my_llm_service',

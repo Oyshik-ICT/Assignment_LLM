@@ -14,7 +14,8 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='PropertySummary',
             fields=[
-                ('property_id', models.IntegerField(primary_key=True, serialize=False)),
+                ('property_id', models.IntegerField(
+                    primary_key=True, serialize=False)),
                 ('summary', models.TextField()),
             ],
         ),
