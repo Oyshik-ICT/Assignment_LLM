@@ -115,5 +115,3 @@ If you encounter any issues:
 2. Check that the PostgreSQL services are properly configured and running.
 3. Verify that Ollama is running and the Gemma 2B model is available.
 4. Review the console output for any error messages during the execution of the `process_properties` command.
-
-For any further assistance, please contact the project maintainer.
