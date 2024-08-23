@@ -100,7 +100,7 @@ This command will process the properties from the Datashift database, rewrite ti
 - `summarizer/management/commands/process_properties.py`: Custom management command for processing properties.
 - `projectLLM/settings.py`: Project settings, including database configurations.
 
-## Notes for the Mentor
+## Notes
 
 - Ensure that the Datashift project database is accessible and contains the required `MyApp_property` and `MyApp_amenity` tables.
 - The project uses the `gemma2:2b` model through Ollama. Make sure Ollama is installed and the model is available.
