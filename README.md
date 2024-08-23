@@ -22,25 +22,30 @@ This project consists of a custom CLI command that:
 ## Setup Instructions
 
 1. Clone the repository:
+
    ```
    git clone https://github.com/Oyshik-ICT/Assignment_LLM.git
    cd Assignment_LLM
    ```
 
 2. Create a virtual environment and activate it:
+
    ```
    python -m venv venv
    source venv/bin/activate  # On Windows, use `venv\Scripts\activate`
    ```
 
 3. Install the required packages:
+
    ```
    pip install -r requirements.txt
    ```
 
 4. Set up the PostgreSQL databases:
+
    - Ensure you have two PostgreSQL databases set up: one for projectLLM and one for Datashift.
    - Create or update the `.pg_service.conf` file in your home directory with the following structure:
+
      ```
      [my_service]
      host=
@@ -56,11 +61,13 @@ This project consists of a custom CLI command that:
      port=
      password=
      ```
+
    - Fill in the appropriate details for each service:
      - `[my_service]` should contain the connection details for the Datashift project database.
      - `[my_llm_service]` should contain the connection details for the projectLLM database.
 
 5. Apply migrations:
+
    ```
    python manage.py migrate
    ```
@@ -73,6 +80,7 @@ This project consists of a custom CLI command that:
 ## Running the Project
 
 1. Start the Ollama server:
+
    ```
    ollama serve
    ```
@@ -102,6 +110,7 @@ This command will process the properties from the Datashift database, rewrite ti
 ## Troubleshooting
 
 If you encounter any issues:
+
 1. Ensure all dependencies are installed correctly.
 2. Check that the PostgreSQL services are properly configured and running.
 3. Verify that Ollama is running and the Gemma 2B model is available.
