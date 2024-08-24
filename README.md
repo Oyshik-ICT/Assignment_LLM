@@ -100,7 +100,6 @@ This command will process the properties from the Datashift database, rewrite ti
 
 - Ensure that the Datashift project database is accessible and contains the required `MyApp_property` and `MyApp_amenity` tables.
 - The project uses the `gemma2:2b` model through Ollama. Make sure Ollama is installed and the model is available.
-- You'll need to configure the `.pg_service.conf` file with the appropriate database details for both the Datashift and projectLLM databases.
 - If you encounter any issues with database connections, double-check the PostgreSQL service configurations and ensure the databases are created and accessible.
 
 ## Troubleshooting
